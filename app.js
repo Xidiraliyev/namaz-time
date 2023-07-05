@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const fs = require("fs");
-let pas = "salom.html";
+let pas = "index.html";
 let data = `fhfgh`;
 const port = process.env.PORT || 8080
 // app.set('view engine', 'ejs');
@@ -191,11 +191,10 @@ app.get("/", async (req, res) => {
 
     run();
 
-    res.sendFile(path.join(__dirname, "./salom.html"));
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.listen(port, () => {
-    console.log(path.join(__dirname, "/./index.html"));
     console.log("server is running");
 });
 
